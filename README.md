@@ -13,3 +13,15 @@ This experiment demonstrates the creation of an Azure Synapse Dedicated SQL Pool
 ## Experiment 3 – Query and Analyze Structured and Unstructured Data Using Synapse
 
 This experiment demonstrates querying and analyzing structured and unstructured data stored in Azure Data Lake Storage using Azure Synapse Analytics. Data files are uploaded to Azure Data Lake Storage and connected to the Synapse workspace, where SQL queries are used to access and analyze the stored data. The query results are verified in Synapse, demonstrating the use of Azure services for data lake analytics, data processing, and cloud-based data analysis.
+
+## Experiment 4: Copy CSV File from On-Premises to Azure Data Lake Storage Gen2
+
+The objective of this experiment is to transfer a CSV file from an on-premises Windows Server to Azure Data Lake Storage Gen2 using Azure Data Factory. A CSV file named `Prajwal.csv` was created in the `C:\ADF_CA` directory, and the source and destination datasets were configured using the appropriate linked services. A pipeline was created using the Copy Data activity to transfer the file to the Azure Storage container. The pipeline was validated and executed successfully, demonstrating data movement between the on-premises environment and Azure cloud storage.
+
+## Experiment 5: Configure Integration Runtime and Linked Services
+
+The objective of this experiment is to configure connectivity between an on-premises Windows Server and Azure services using Azure Data Factory. A Self-Hosted Integration Runtime named `integrationRuntime-148` was configured to access the on-premises environment. The file system linked service `LS_Onprem_File_148` was configured to connect to the shared folder containing the CSV file, while the Azure Data Lake Storage Gen2 linked service `LS_adls_ingest_148` was configured to connect to the destination storage account. The connections were tested successfully, establishing the connectivity required for data integration.
+
+## Experiment 6: Verify Data Ingestion into Azure Data Lake Storage Gen2
+
+The objective of this experiment is to verify the successful transfer of a CSV file from an on-premises Windows Server to Azure Data Lake Storage Gen2. The Azure Data Factory pipeline was executed using the configured source and destination datasets, with the destination path set to the `raw/ingest` directory in the storage container. The pipeline execution output showed a successful status, and the Azure Portal was used to verify that `Prajwal.csv` was present in the destination directory. This experiment demonstrated successful data ingestion and verification using Azure Data Factory.
